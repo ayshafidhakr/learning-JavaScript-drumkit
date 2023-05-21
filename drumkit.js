@@ -16,41 +16,51 @@ document.addEventListener("keypress", function(event) {
     function sound(key) {
         switch (key) {
             case "w":
-            var sound1 = new Audio("audio/75_Rimshots_07_14_SP.wav");
+            var sound1 = new Audio("audio/clap.mp3");
             sound1.play();
             break;
         
             case "a":
-            var sound2 = new Audio("audio/HandClap_01_545.wav");
+            var sound2 = new Audio("audio/hihat.mp3");
             sound2.play();
             break;
         
             case "s":
-            var sound3 = new Audio("audio/HiHat_13_3_SP.wav");
+            var sound3 = new Audio("audio/kick.mp3");
             sound3.play();
             break;
         
             case "d":
-            var sound4 = new Audio("audio/DolKick_02_728.wav");
+            var sound4 = new Audio("audio/openhat.mp3");
             sound4.play();
             break;
         
             case "j":
-            var sound5 = new Audio("audio/BoneD03NatuSnare_02_705.wav");
+            var sound5 = new Audio("audio/ride.mp3");
             sound5.play();
             break;
         
             case "k":
-            var sound6 = new Audio("audio/Tom2_M_369.wav");
+            var sound6 = new Audio("audio/snare.mp3");
             sound6.play();
             break;
         
             case "l":
-            var sound7 = new Audio("audio/TD6K_OpenHat_003_73_SP.wav");
+            var sound7 = new Audio("audio/tom.mp3");
             sound7.play();
             break;
         
             default: console.log(key);
         }
         }
+        function animation(currentKey) {
+            var activeButton = document.querySelector("." + currentKey);
+            
+            activeButton.classList.add("animation");
+            
+            setTimeout(function() {
+                activeButton.classList.remove("animation");
+            }, 100);
+            }
+            
             
